@@ -12,6 +12,8 @@ It creates:
 As I'm using this or a similar script on all my servers I've just tested this against software that I use.
 
 * Debian Buster (10)
+* Debian Jessie (9)
+* Debian Stretch (8)
 
 ## Usage
 
