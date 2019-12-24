@@ -2,8 +2,8 @@
 
 # Set some needed variables
 PKIIDENTITY=$RANDOM
-PSKKEY=`openssl rand -hex 32`
-DEBIANVERSION=`cat /etc/debian_version`
+PSKKEY=$(openssl rand -hex 32)
+DEBIANVERSION=$(cat /etc/debian_version)
 ZABBIXHOST=""
 
 # Get hostname of Zabbix-Server
@@ -27,7 +27,7 @@ apt-get -qq update >/dev/null 2>&1
 apt-get -qq install zabbix-agent openssl -y >/dev/null 2>&1
 
 # Deploy PSKKEY
-echo $PSKKEY > /etc/zabbix/zabbix_agentd.psk
+echo "$PSKKEY" > /etc/zabbix/zabbix_agentd.psk
 
 # Generate Zabbix-Agent-Configuration
 cat <<EOT > /etc/zabbix/zabbix_agentd.conf
@@ -36,7 +36,7 @@ LogFile=/var/log/zabbix/zabbix_agentd.log
 LogFileSize=0
 Server=$ZABBIXHOST
 ServerActive=$ZABBIXHOST
-Hostname=`hostname -f`
+Hostname=$(hostname -f)
 Include=/etc/zabbix/zabbix_agentd.d/*.conf
 TLSConnect=psk
 TLSAccept=psk
