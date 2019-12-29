@@ -8,8 +8,8 @@ ZABBIXHOST=""
 
 # Get hostname of Zabbix-Server
 if [ -z "$ZABBIXHOST" ]; then
-	echo -n "==> Please input the hostname of your Zabbix Monitoring Server... [zabbix.example.org]: "
-	read -r ZABBIXHOST
+        echo -n "==> Please input the hostname of your Zabbix Monitoring Server... [zabbix.example.org]: "
+        read -r ZABBIXHOST
 fi
 
 # Get Debian version
@@ -27,10 +27,10 @@ apt-get -qq update >/dev/null 2>&1
 apt-get -qq install zabbix-agent openssl -y >/dev/null 2>&1
 
 # Deploy PSKKEY
-echo "$PSKKEY" > /etc/zabbix/zabbix_agentd.psk
+echo "$PSKKEY" >/etc/zabbix/zabbix_agentd.psk
 
 # Generate Zabbix-Agent-Configuration
-cat <<EOT > /etc/zabbix/zabbix_agentd.conf
+cat <<EOT >/etc/zabbix/zabbix_agentd.conf
 PidFile=/var/run/zabbix/zabbix_agentd.pid
 LogFile=/var/log/zabbix/zabbix_agentd.log
 LogFileSize=0
