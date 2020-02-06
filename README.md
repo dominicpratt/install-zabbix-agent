@@ -20,7 +20,7 @@ As I'm using this or a similar script on all my servers I've just tested this ag
 Just run the script directly (please, for gods sake - check the code prior to execution):
 
 ```
-bash <(curl -s https://github.com/dominicpratt/install-zabbix-agent/blob/master/install-zabbix-agent.sh)
+bash <(curl -s https://raw.githubusercontent.com/dominicpratt/install-zabbix-agent/master/install-zabbix-agent.sh)
 ```
 
 ## Contributing
