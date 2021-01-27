@@ -14,11 +14,11 @@ fi
 
 # Get Debian version
 if [[ $DEBIANVERSION == *"10"* ]]; then
-        wget -q https://repo.zabbix.com/zabbix/4.5/debian/pool/main/z/zabbix-release/zabbix-release_4.5-1%2Bbuster_all.deb -O /tmp/zabbix.deb
+        wget -q https://repo.zabbix.com/zabbix/5.2/debian/pool/main/z/zabbix-release/zabbix-release_5.2-1%2Bdebian10_all.deb -O /tmp/zabbix.deb
 elif [[ $DEBIANVERSION == *"9"* ]]; then
-        wget -q https://repo.zabbix.com/zabbix/4.5/debian/pool/main/z/zabbix-release/zabbix-release_4.5-1%2Bstretch_all.deb -O /tmp/zabbix.deb
+        wget -q https://repo.zabbix.com/zabbix/5.2/debian/pool/main/z/zabbix-release/zabbix-release_5.2-1%2Bdebian9_all.deb -O /tmp/zabbix.deb
 elif [[ $DEBIANVERSION == *"8"* ]]; then
-        wget -q https://repo.zabbix.com/zabbix/4.5/debian/pool/main/z/zabbix-release/zabbix-release_4.5-1%2Bjessie_all.deb -O /tmp/zabbix.deb
+        wget -q https://repo.zabbix.com/zabbix/5.2/debian/pool/main/z/zabbix-release/zabbix-release_5.2-1%2Bdebian8_all.deb -O /tmp/zabbix.deb
 fi
 
 # Install Zabbix-Repository, then update sources and install Zabbix-Agent and OpenSSL
